@@ -10,7 +10,6 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import sample.Kulka;
 
 import java.io.IOException;
 import java.util.Random;
@@ -29,6 +28,7 @@ public class HelloApplication extends Application {
     private static final double R=10;
     private static final int LICZBAKULEK = 10;
     private Kulka[] kulki = new Kulka[LICZBAKULEK];
+    private Rugby[] rugby = new Rugby[LICZBAKULEK];
 
     private void initKule() {
         Random lott = new Random();
@@ -39,6 +39,19 @@ public class HelloApplication extends Application {
             5 + lott.nextDouble() * 20,
             5 + lott.nextDouble() * 20,
             Color.WHITESMOKE);
+        }
+    }
+    private void initRugby(){
+        Random random = new Random();
+        for (int i = 0; 1 < LICZBAKULEK; i++) {
+            rugby[i] = new Rugby(
+                    random.nextDouble() * ARENAWIDTH + ARENAX1,
+                    random.nextDouble() * ARENAHEIGHT + ARENAY1,
+                    5 + random.nextDouble() * 20,
+                    5 + random.nextDouble() * 20,
+                    Color.WHITESMOKE,
+                    10.0,
+                    15.0);
         }
     }
 

@@ -1,4 +1,4 @@
-package sample;
+package com.example.lab4;
 
 import java.util.Random;
 import javafx.scene.canvas.GraphicsContext;
@@ -10,7 +10,7 @@ import javafx.scene.paint.Color;
     protected double xSpeed;
     protected double yPos;
     protected double xPos;
-    private Color color;
+    public Color color;
 
     public Color getColor()
     {

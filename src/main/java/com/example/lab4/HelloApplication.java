@@ -16,6 +16,7 @@ import javafx.util.Duration;
 
 import java.io.IOException;
 import java.util.EventListener;
+import java.util.Random;
 
 import static javafx.scene.paint.Color.WHITESMOKE;
 
@@ -35,6 +36,14 @@ public class HelloApplication extends Application {
     private double y = ARENAY1+ARENAHEIGHT/2;
     private double vx = 5;
     private double vy = 2;
+
+    private void intKula(){
+        Random lott = new Random();
+        x=lott.nextDouble()*ARENAWIDTH+ARENAX1;
+        y=lott.nextDouble()*ARENAHEIGHT+ARENAY1;
+        vx = 5+lott.nextDouble()*20;
+        vy = 5+lott.nextDouble()*20;
+    }
 
     private void run(GraphicsContext gc)
     {

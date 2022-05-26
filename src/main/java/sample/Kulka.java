@@ -11,8 +11,7 @@ public class Kulka{
     protected double yPos;
     protected double xPos;
 
-
-    Kulka(double xPos,double yPos,double xSpeed,double ySpeed)
+    public Kulka(double xPos, double yPos, double xSpeed, double ySpeed)
     {
         this.xPos=xPos;
         this.yPos=yPos;

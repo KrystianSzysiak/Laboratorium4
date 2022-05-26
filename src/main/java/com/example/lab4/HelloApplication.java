@@ -41,14 +41,14 @@ public class HelloApplication extends Application {
         gc.setFill(Color.BLACK);
         gc.fillRect(ARENAX1,ARENAY1,ARENAWIDTH,ARENAHEIGHT);
 
-        if((x<=ARENAX1) || ((x>=ARENAX2))) vx = -vx;
-        if((y<=ARENAY1) || ((y>=ARENAY2))) vy = -vy;
+        if((x<=ARENAX1+R) || ((x>=ARENAX2-R))) vx = -vx;
+        if((y<=ARENAY1+R) || ((y>=ARENAY2-R))) vy = -vy;
 
         x +=vx;
         y +=vy;
 
         gc.setFill(Color.WHITESMOKE);
-        gc.fillOval(x,y,2*R,2*R);
+        gc.fillOval(x-R,y-R,2*R,2*R);
     }
 
     @Override

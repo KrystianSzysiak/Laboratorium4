@@ -10,6 +10,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import sample.Kulka;
 
 import java.io.IOException;
 import java.util.Random;
@@ -27,20 +28,17 @@ public class HelloApplication extends Application {
     private static final double ARENAY2 = ARENAY1 + ARENAHEIGHT;
     private static final double R=10;
     private static final int LICZBAKULEK = 10;
-    private double[] x = new double[LICZBAKULEK];
-    private double[] y = new double[LICZBAKULEK];
-    private double[] vx = new double[LICZBAKULEK];
-    private double[] vy = new double[LICZBAKULEK];
-    private sample.Kulka[] kulki = new sample.Kulka[LICZBAKULEK];
+    private Kulka[] kulki = new Kulka[LICZBAKULEK];
 
     private void initKule() {
         Random lott = new Random();
         for (int i = 0; 1 < LICZBAKULEK; i++) {
-            kulki[i] = new sample.Kulka(
+            kulki[i] = new Kulka(
             lott.nextDouble() * ARENAWIDTH + ARENAX1,
             lott.nextDouble() * ARENAHEIGHT + ARENAY1,
             5 + lott.nextDouble() * 20,
-            5 + lott.nextDouble() * 20);
+            5 + lott.nextDouble() * 20,
+            Color.WHITESMOKE);
         }
     }
 

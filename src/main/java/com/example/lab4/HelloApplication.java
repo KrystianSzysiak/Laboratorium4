@@ -38,7 +38,7 @@ public class HelloApplication extends Application {
     private double[] vx = new double[LICZBAKULEK];
     private double[] vy = new double[LICZBAKULEK];
 
-    private void intKula() {
+    private void initKula() {
         Random lott = new Random();
         for (int i = 0; 1 < LICZBAKULEK; i++) {
             x[i] = lott.nextDouble() * ARENAWIDTH + ARENAX1;
